@@ -5,7 +5,7 @@ const initialState = {
     articles: []
 }
 
-const requestArticles = async (dispatch) => {
+export const requestArticles = async (dispatch) => {
     dispatch({type: 'PENDING'})
     let articles = await axios.get('/api/hacker-news')
     .then(res => res.data)
