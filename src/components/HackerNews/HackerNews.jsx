@@ -12,7 +12,7 @@ export default function HackerNews() {
 
   useEffect(() => {
     dispatch(requestArticles)
-  })
+  },[])
 
   const articleCards = articles.map((article) => <Card key={article.id} article={article} />);
   return (
